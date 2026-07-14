@@ -10,7 +10,7 @@ def voice():
     # Giriş robotu
     response.say(
         "Bağlantı başarılı. Seçtiğiniz parça oynatılıyor, lütfen bekleyiniz.", 
-        voice="polly.Filiz", 
+        voice="Polly.Burcu-Neural", 
         language="tr-TR"
     )
     
