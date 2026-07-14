@@ -7,14 +7,14 @@ app = Flask(__name__)
 def voice():
     response = VoiceResponse()
     
-    # Giriş robotu (Banka robotu sesiyle)
+    # Giriş robotu
     response.say(
         "Bağlantı başarılı. Seçtiğiniz parça oynatılıyor, lütfen bekleyiniz.", 
         voice="polly.Filiz", 
         language="tr-TR"
     )
     
-    # Senin gönderdiğin doğrudan MP3 linkini çalıyoruz!
+    # Doğrudan indirme bağlantısına dönüştürülmüş müzik linki
     response.play("https://www.image2url.com/r2/default/audio/1784044764478-fd34e470-40be-4b28-b51f-06103222d12a.mp3")
     
     return str(response)
