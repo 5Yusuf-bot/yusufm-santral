@@ -15,7 +15,7 @@ def voice():
     )
     
     # Doğrudan indirme bağlantısına dönüştürülmüş müzik linki
-    response.play("https://www.image2url.com/r2/default/audio/1784044764478-fd34e470-40be-4b28-b51f-06103222d12a.mp3")
+    response.play("https://www.image2url.com/r2/default/audio/1784045664647-90e43cf3-72ea-4880-becd-b0c978bb2fdd.mp3")
     
     return str(response)
 
