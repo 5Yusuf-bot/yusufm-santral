@@ -7,17 +7,19 @@ app = Flask(__name__)
 def voice():
     response = VoiceResponse()
     
-    # Amazon Polly'nin Türkçe "Filiz" (Banka Robotu) sesini tanımlıyoruz
+    # Giriş robotu (Banka robotu sesiyle)
     response.say(
-        "Merhaba Yusuf. Yapay zeka sesli yanıt sistemine başarıyla bağlandınız. Lütfen yapmak istediğiniz işlemi seçiniz.", 
+        "Bağlantı başarılı. Seçtiğiniz parça oynatılıyor, lütfen bekleyiniz.", 
         voice="polly.Filiz", 
         language="tr-TR"
     )
+    
+    # Senin gönderdiğin doğrudan MP3 linkini çalıyoruz!
+    response.play("https://www.image2url.com/r2/default/audio/1784044764478-fd34e470-40be-4b28-b51f-06103222d12a.mp3")
     
     return str(response)
 
 if __name__ == "__main__":
     import os
-    # Render'ın port ayarını otomatik alması için dinamik port tanımlıyoruz
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
